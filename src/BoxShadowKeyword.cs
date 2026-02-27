@@ -6,6 +6,7 @@ namespace Soenneker.Quark.Enums;
 /// An HTML CSS keyword set in .NET enumeration form
 /// </summary>
 [EnumValue<string>]
+[IncludeEnumValues(typeof(GlobalKeyword))]
 public partial class BoxShadowKeyword
 {
     /// <summary>
@@ -18,6 +19,4 @@ public partial class BoxShadowKeyword
     /// This keyword can be used in combination with other box-shadow values.
     /// </summary>
     public static readonly BoxShadowKeyword Inset = new("inset");
-
-    public static implicit operator BoxShadowKeyword(GlobalKeyword style) => new(style.Value); // Value is the underlying string
 }
