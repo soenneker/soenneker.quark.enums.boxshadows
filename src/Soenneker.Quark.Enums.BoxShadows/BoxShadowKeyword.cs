@@ -2,21 +2,51 @@ using Soenneker.Gen.EnumValues;
 
 namespace Soenneker.Quark;
 
-/// <summary>
-/// An HTML CSS keyword set in .NET enumeration form
-/// </summary>
 [EnumValue<string>]
-[IncludeEnumValues(typeof(GlobalKeyword))]
-public partial class BoxShadowKeyword
+public sealed partial class BoxShadowEnum
 {
     /// <summary>
-    /// No shadow is displayed. This is the default value.
+    /// No shadow
     /// </summary>
-    public static readonly BoxShadowKeyword None = new("none");
+    public static readonly BoxShadowEnum None = new("shadow-none");
 
     /// <summary>
-    /// The shadow is drawn inside the element's border box, creating an inner shadow effect.
-    /// This keyword can be used in combination with other box-shadow values.
+    /// Extra small shadow
     /// </summary>
-    public static readonly BoxShadowKeyword Inset = new("inset");
+    public static readonly BoxShadowEnum Xs = new("shadow-xs");
+
+    /// <summary>
+    /// Small shadow
+    /// </summary>
+    public static readonly BoxShadowEnum Sm = new("shadow-sm");
+
+    /// <summary>
+    /// Default shadow
+    /// </summary>
+    public static readonly BoxShadowEnum Default = new("shadow");
+
+    /// <summary>
+    /// Medium shadow
+    /// </summary>
+    public static readonly BoxShadowEnum Md = new("shadow-md");
+
+    /// <summary>
+    /// Large shadow
+    /// </summary>
+    public static readonly BoxShadowEnum Lg = new("shadow-lg");
+
+    /// <summary>
+    /// Extra large shadow
+    /// </summary>
+    public static readonly BoxShadowEnum Xl = new("shadow-xl");
+
+    /// <summary>
+    /// 2x extra large shadow
+    /// </summary>
+    public static readonly BoxShadowEnum TwoXl = new("shadow-2xl");
+
+    /// <summary>
+    /// Inner shadow
+    /// </summary>
+    public static readonly BoxShadowEnum Inner = new("shadow-inner");
 }
